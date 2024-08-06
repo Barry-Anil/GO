@@ -28,5 +28,18 @@ func main() {
 
 	fmt.Println(ageOne, ageTwo, ageThree, ageFour)
 
+	//bits and memory
+
+	var bitOne int8 = -124
+	var bitTwo uint8 = 123
+
+	fmt.Println(bitOne, bitTwo)
+
+	//Float
+
+	var floatOne float32 = 342.34
+	var floatTwo float64 = 238428348.234234
+
+	fmt.Println(floatOne, floatTwo)
 
 }

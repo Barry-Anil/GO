@@ -3,43 +3,27 @@ package main
 import "fmt"
 
 func main() {
+	age := 29
+	name := "barry"
+	//Print 
+	fmt.Print("hello")
+	fmt.Print("hello \n")
+	fmt.Print("hello \n")
+
+	//Print line
 	fmt.Println("Hello, Ninjas!!")
-	var name string = "Barry"
-	var nameTwo = "lee"
-	var nameThree string
 
-	fmt.Println(name, nameTwo, nameThree)
+	fmt.Println("My name is =", name, "age is =", age)
 
-	name = "anil"
-	nameThree = "Barry Anil"
+	//priintf (formatted Strings) %_ = format specifier
+	fmt.Printf("my name is %v and my age is %v \n", name, age)
+	fmt.Printf("my name is %q and my age is %q \n", name, age)
+	fmt.Printf(" age is of Type %T \n", age)
+	fmt.Printf("your score is %f \n", 98.99)
+	fmt.Printf("your score is %0.1f \n", 98.9924)
 
-	fmt.Println(name, nameTwo, nameThree)
 
-	nameFour := "7uckingMad!"
-
-	fmt.Println(name, nameTwo, nameThree, nameFour)
-
-	//Integers
-
-	var ageOne int = 20
-	var ageTwo = 30
-	var ageThree int
-	ageFour := 40
-
-	fmt.Println(ageOne, ageTwo, ageThree, ageFour)
-
-	//bits and memory
-
-	var bitOne int8 = -124
-	var bitTwo uint8 = 123
-
-	fmt.Println(bitOne, bitTwo)
-
-	//Float
-
-	var floatOne float32 = 342.34
-	var floatTwo float64 = 238428348.234234
-
-	fmt.Println(floatOne, floatTwo)
-
+	// SprintF (save formatted strings)
+	var str = fmt.Sprintf("my name is %v and my age is %v \n", name, age)
+	fmt.Println(str)
 }

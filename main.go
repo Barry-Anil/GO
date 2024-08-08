@@ -1,29 +1,39 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
 
 func main() {
-	age := 29
-	name := "barry"
-	//Print 
-	fmt.Print("hello")
-	fmt.Print("hello \n")
-	fmt.Print("hello \n")
+	//Packages STRINGS
 
-	//Print line
-	fmt.Println("Hello, Ninjas!!")
+	greeting := "Hello world!"
 
-	fmt.Println("My name is =", name, "age is =", age)
+	fmt.Println(strings.Contains(greeting, "hello"))
+	fmt.Println(strings.ReplaceAll(greeting, "Hello", "World!"))
+	fmt.Println(strings.ToLower(greeting))
+	fmt.Println(strings.Index(greeting, "wo"))
+	fmt.Println(strings.Split(greeting, " "))
 
-	//priintf (formatted Strings) %_ = format specifier
-	fmt.Printf("my name is %v and my age is %v \n", name, age)
-	fmt.Printf("my name is %q and my age is %q \n", name, age)
-	fmt.Printf(" age is of Type %T \n", age)
-	fmt.Printf("your score is %f \n", 98.99)
-	fmt.Printf("your score is %0.1f \n", 98.9924)
+	//the original value is unchanged
+	fmt.Println("original string value =", greeting)
 
 
-	// SprintF (save formatted strings)
-	var str = fmt.Sprintf("my name is %v and my age is %v \n", name, age)
-	fmt.Println(str)
+	//Package : SORT
+
+	ages := []int{12, 15, 34, 57, 65, 86, 33}
+
+	sort.Ints(ages)
+	fmt.Println(ages)
+	index := sort.SearchInts(ages, 15)
+	fmt.Println(index)
+
+	names := []string{"barry", "anil", "li", "niyoku"}
+	sort.Strings(names)
+	fmt.Println(names)
+
+	fmt.Println(sort.SearchStrings(names, "li"))
+
 }

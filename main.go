@@ -7,6 +7,6 @@ import (
 
 func main() {
 	bill := newBill("arry's bill")
-	fmt.Println(bill)
+	fmt.Println(bill.format())
 }
 

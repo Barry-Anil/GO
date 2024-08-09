@@ -25,12 +25,26 @@ func (b bill) format() string {
 
 	//list items
 	for k, v := range b.items {
-		fs += fmt.Sprintf("%-25v ..... %v \n", k+":", v)
+		fs += fmt.Sprintf("%-25v ... %v \n", k+":", v)
 		total += v
 	}
 
+	//tips
+	fs += fmt.Sprintf("%-25v ... $%0.2f \n", "tip: ", b.tip)
+
 	//total 
-	fs += fmt.Sprintf("%-25v ..... $%0.2f", "total:", total)
+	fs += fmt.Sprintf("%-25v ... $%0.2f", "total: ", total + b.tip)
 
 	return fs
+}
+
+//tips
+
+func (b *bill) updateTip(tip float64) {
+	b.tip = tip
+}
+
+//add item
+func (b *bill) addItem(name string, price float64){
+	b.items[name] = price
 }
